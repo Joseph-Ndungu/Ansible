@@ -1,2 +1,2 @@
-# Ansible-Roles
-Custom roles for redhat
+# Ansible
+Simple ansible project for redhat

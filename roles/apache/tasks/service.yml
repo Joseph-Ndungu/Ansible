@@ -11,7 +11,7 @@
     state: started
 
 - name: restart service
-  shell: systemctl status httpd
+  shell: systemctl start httpd
   notify:
     - restart apache service
   tags:

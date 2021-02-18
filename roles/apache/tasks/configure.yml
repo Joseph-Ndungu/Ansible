@@ -1,0 +1,13 @@
+#Configuring httpd.conf and sending sample html file
+#copy: src=httpd.conf dest=/etc/httpd/conf/httpd.conf
+#- name: restart
+#  notify:
+#    - restart apache service
+
+- name: send index.html
+  copy: src=index.html dest=/var/www/html/index.html
+
+- name: Allow httpd through firewall
+  command: firewall-cmd --zone=public --permanent --add-port=80/tcp
+- name: Restart firewall
+  command: firewall-cmd --reload

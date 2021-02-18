@@ -1,0 +1,14 @@
+---
+- name: Install python-3.6
+  hosts: hosts
+  become: yes
+  tasks:
+    - name: install python
+      yum: 
+        name=python36
+        state=present
+      yum:
+        name=python36-devel 
+        state=present
+    - name: Add python --> python3.6 symlink
+      command: ln -s /usr/bin/python3.6 /usr/bin/python 

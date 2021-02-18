@@ -1,0 +1,13 @@
+#installing httpd package
+- name: remove apache if existing
+  yum: 
+    name: httpd
+    state: absent
+- name: remove httpd directory
+  command: rm -fr /etc/httpd
+- name: Installing Apache
+  yum:
+    name: httpd
+    state: latest
+- name: start apache
+  command: systemctl start httpd

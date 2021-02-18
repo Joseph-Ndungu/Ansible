@@ -1,6 +1,6 @@
 ---
 #Start apache service
-- name: Starting apache service
+- name: Enable apache service
   service: 
     name: httpd 
     enabled: yes
@@ -8,3 +8,6 @@
   service: 
     name: httpd 
     state: started
+- name: restart
+  notify:
+    - restart apache service

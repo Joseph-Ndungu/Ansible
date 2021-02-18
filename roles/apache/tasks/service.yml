@@ -1,4 +1,10 @@
 ---
 #Start apache service
 - name: Starting apache service
-  service: name=httpd state=started
+  service: 
+    name: httpd 
+    enabled: yes
+- name: Starting apache service
+  service: 
+    name: httpd 
+    state: started

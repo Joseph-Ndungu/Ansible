@@ -16,3 +16,10 @@
     - restart apache service
   tags:
     - always
+- name: restart the service again
+  shell: systemctl start httpd
+  
+- name: Starting apache service again
+  service: 
+    name: httpd 
+    state: started

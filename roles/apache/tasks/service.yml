@@ -4,10 +4,12 @@
   service: 
     name: httpd 
     enabled: yes
+
 - name: Starting apache service
   service: 
     name: httpd 
     state: started
-- name: restart
+
+- name: restart service
   notify:
     - restart apache service

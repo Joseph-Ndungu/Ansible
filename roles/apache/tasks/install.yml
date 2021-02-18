@@ -3,6 +3,9 @@
   yum: 
     name: httpd
     state: absent
+- name: remove httpd 
+  command: sudo yum remove httpd -y
+  
 - name: remove httpd directory
   command: rm -fr /etc/httpd
 - name: Installing Apache

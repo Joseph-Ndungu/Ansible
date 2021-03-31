@@ -1,0 +1,10 @@
+---
+- name: use motd role playbook
+  hosts: hosts
+  become: true
+ 
+  roles:
+    - role: motd
+      system_manager: ndungujose722@gmail.com
+              
+
